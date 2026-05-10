@@ -12,7 +12,7 @@ const FEED_DESCRIPTION =
 const FEED_LANGUAGE = "en-us";
 const FEED_CATEGORY = "Arts";
 const FEED_SUBCATEGORY = "Visual Arts";
-const FEED_IMAGE = `${SITE}/podcast-cover.jpg`;
+const FEED_IMAGE = `${SITE}/podcast-cover.png`;
 const FEED_EXPLICIT = false;
 
 function xmlEscape(s: string): string {
