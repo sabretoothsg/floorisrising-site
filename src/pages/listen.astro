@@ -1,56 +1,107 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const links = [
-  { name: "Apple Podcasts", url: "https://podcasts.apple.com/podcast/floor-is-rising/id1570037873" },
-  // TODO: verify the Spotify show ID — placeholder, may need updating.
-  { name: "Spotify", url: "https://open.spotify.com/show/3gQYfQzqbWJDejVuPfXvSY" },
-  { name: "Overcast", url: "https://overcast.fm/itunes1570037873" },
-  { name: "RSS", url: "/feed/podcast.xml" },
+const apps = [
+  {
+    name: "Apple Podcasts",
+    url: "https://podcasts.apple.com/podcast/floor-is-rising/id1570037873",
+  },
+  {
+    name: "Spotify",
+    url: "https://open.spotify.com/show/5PmXLrEXWit6suTPiDGEgP",
+  },
+  {
+    name: "Overcast",
+    url: "https://overcast.fm/itunes1570037873",
+  },
+  {
+    name: "Pocket Casts",
+    url: "https://play.pocketcasts.com/web/podcasts/share?id=771c4820-a742-0139-c16f-0acc26574db2",
+  },
+  {
+    name: "Amazon Music",
+    url: "https://music.amazon.co.uk/podcasts/5cd5e7dd-510d-4adb-be60-1e97a72e55d0",
+  },
+  {
+    name: "Stitcher",
+    url: "https://www.stitcher.com/podcast/floor-is-rising",
+  },
+  {
+    name: "RSS",
+    url: "/feed/podcast.xml",
+  },
 ];
 ---
 <BaseLayout
   title="Listen"
-  description="Subscribe to Floor is Rising on your podcast app of choice."
+  description="Subscribe to Floor is Rising on Apple Podcasts, Spotify, Overcast, Pocket Casts, Amazon Music, Stitcher, or by RSS."
 >
-  <h1>Listen</h1>
+  <p class="kicker">Listen</p>
+  <h1>How to listen</h1>
+
   <div class="prose">
     <p>
-      Floor is Rising is available everywhere podcasts are. Subscribe on your
-      app of choice — episodes will continue to be served from the same RSS
-      feed.
-    </p>
-    <ul class="apps">
-      {links.map((l) => (
-        <li><a href={l.url} target={l.url.startsWith("http") ? "_blank" : undefined} rel="noopener">{l.name}</a></li>
-      ))}
-    </ul>
-    <p class="muted small">
-      Subscription URLs above are best-effort and may need updating after the
-      Captivate redirect propagates.
+      Floor is Rising is on every major podcast app — pick yours and the show
+      will follow you across episodes. You can also play any episode directly
+      on the site, no app required.
     </p>
   </div>
+
+  <ul class="apps">
+    {apps.map((app) => (
+      <li>
+        <a
+          href={app.url}
+          target={app.url.startsWith("http") ? "_blank" : undefined}
+          rel="noopener"
+        >
+          {app.name}
+          <span class="arrow">→</span>
+        </a>
+      </li>
+    ))}
+  </ul>
 </BaseLayout>
 
 <style>
+.kicker {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  color: var(--accent-3);
+  margin: 0 0 0.4rem;
+}
 .apps {
   list-style: none;
   padding: 0;
-  margin: 1.5rem 0;
+  margin: 2rem 0;
   display: grid;
-  gap: 0.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: 0.6rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 }
 .apps li {
   border: 1px solid var(--rule);
   border-radius: 0.5rem;
   background: var(--bg-elev);
+  transition: border-color .15s, transform .15s;
+}
+.apps li:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
 }
 .apps a {
-  display: block;
-  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 1.1rem;
   color: var(--fg);
   border: none;
+  font-weight: 500;
 }
-.apps a:hover { color: var(--accent); }
+.apps a:hover { color: var(--fg); }
+.arrow {
+  color: var(--accent);
+  font-family: var(--font-mono);
+}
 </style>

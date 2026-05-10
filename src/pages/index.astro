@@ -13,9 +13,11 @@ const recent = episodes.slice(0, 6);
     <p class="kicker">A podcast on NFTs and crypto art</p>
     <h1>Floor is Rising</h1>
     <p class="lede">
-      Long-form interviews with the artists, collectors, and builders shaping
-      digital art on the blockchain. {episodes.length} episodes from the
-      original 2021–2023 run, now archived in their original form.
+      NFT collector <a href="https://twitter.com/sabretoothsg" target="_blank" rel="noopener">@Sabretooth</a>
+      and contemporary art critic <a href="https://twitter.com/kaifuku_kizu" target="_blank" rel="noopener">@Kizu</a>
+      deep-dive into NFTs and crypto art across {episodes.length} episodes from
+      2021&nbsp;–&nbsp;2023. Informed musings, hot takes, and spirited
+      arguments — there's something here for everyone.
     </p>
     <p class="cta">
       <a class="button" href="/podcast/">Browse all episodes</a>
@@ -31,6 +33,27 @@ const recent = episodes.slice(0, 6);
     <p class="more">
       <a href="/podcast/">View all {episodes.length} episodes →</a>
     </p>
+  </section>
+
+  <section class="about-teaser">
+    <h2>About the podcast</h2>
+    <div class="prose">
+      <p>
+        Are NFTs more akin to the world of contemporary art or to collectibles?
+        Is it mostly about memes, clout, social capital, or crypto wealth?
+        Is this only for Gen Z, or can Boomers also get into the ring?
+        OpenSea, SuperRare, Foundation, Makersplace, ArtBlocks, Hic et Nunc?
+        In a space defined by homage, riffing, copying, and iterating, what's
+        left of the idea of copyright or originality, and the value arising
+        from it? Are NFTs really innovating in technological, economic, social,
+        and aesthetic terms? If not, what's holding the space back?
+      </p>
+      <p>
+        Floor is Rising dives deep into these questions and more, in this
+        corner of the crypto universe that moves at lightning speed.
+      </p>
+      <p><a href="/about/">More about the hosts →</a></p>
+    </div>
   </section>
 </BaseLayout>
 
@@ -93,5 +116,10 @@ const recent = episodes.slice(0, 6);
 .more {
   margin-top: 1.5rem;
   text-align: center;
+}
+.about-teaser {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
 }
 </style>

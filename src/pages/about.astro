@@ -3,26 +3,98 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 <BaseLayout
   title="About"
-  description="About the Floor is Rising podcast and its hosts."
+  description="About Floor is Rising and its hosts, Kizu and Sabretooth."
 >
-  <h1>About</h1>
-  <div class="prose">
+  <p class="kicker">About</p>
+  <h1>About the hosts</h1>
+
+  <section class="host">
+    <div class="copy">
+      <h2>Kizu</h2>
+      <p>
+        Kizu (<a href="https://twitter.com/kaifuku_kizu" target="_blank" rel="noopener">@kaifuku_kizu</a>)
+        is a writer and art critic who has written for the
+        <em>Wall Street Journal</em>, <em>Artforum.com</em>, <em>Art Asia Pacific</em>,
+        and <em>Japan Times</em>. He is the former Head of Visual Arts, Asia at
+        BLOUIN ARTINFO where he covered the contemporary art market both online
+        and in print (<em>Modern Painters</em> and <em>Art + Auction</em>).
+      </p>
+      <p><a href="https://twitter.com/kaifuku_kizu" target="_blank" rel="noopener">Twitter</a></p>
+    </div>
+    <div class="art">
+      <img src="/wp-content/uploads/2021/10/as.png" alt="Kizu" loading="lazy" />
+    </div>
+  </section>
+
+  <section class="host">
+    <div class="copy">
+      <h2>Sabretooth</h2>
+      <p>
+        Sabretooth is a professional NFT collector specialising in contrarian
+        takes. He enjoys collecting and discovering artists and projects before
+        the majority are interested.
+      </p>
+      <p>
+        He's also an OG internet founder — he has built two Web 1.0 companies,
+        three Web 2.0 companies, and is now building projects within Web 3.0.
+      </p>
+      <p><a href="https://twitter.com/sabretoothsg" target="_blank" rel="noopener">Twitter</a></p>
+    </div>
+    <div class="art">
+      <img src="/wp-content/uploads/2021/10/aaasaa.png" alt="Sabretooth" loading="lazy" />
+    </div>
+  </section>
+
+  <hr />
+
+  <section class="cta">
+    <h2>Listen for free</h2>
     <p>
-      Floor is Rising is a long-running podcast about NFTs, crypto art, and the
-      people building the space. The show ran from May 2021 through April 2023
-      and produced 80 episodes interviewing artists, collectors, platform
-      operators, and researchers across the field.
+      Floor is Rising is on every major podcast app, or you can play episodes
+      directly here on the site.
     </p>
-    <p>
-      This site preserves the show's archive. Episodes remain available via
-      their original URLs and through the podcast RSS feed. New episodes are
-      not currently scheduled.
-    </p>
-    <p>
-      <strong>Hosts:</strong> Sabretooth and Kizu.
-    </p>
-    <p class="muted small">
-      Edit this page at <code>src/pages/about.astro</code>.
-    </p>
-  </div>
+    <p><a class="button" href="/listen/">Where to listen →</a></p>
+  </section>
 </BaseLayout>
+
+<style>
+.kicker {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  color: var(--accent-3);
+  margin: 0 0 0.4rem;
+}
+.host {
+  display: grid;
+  grid-template-columns: 1fr 14rem;
+  gap: 2.5rem;
+  align-items: start;
+  margin: 2.5rem 0;
+}
+.host .copy { max-width: var(--measure); }
+.host .art img {
+  width: 100%;
+  border-radius: 0.6rem;
+  border: 1px solid var(--rule);
+  box-shadow: 0 8px 32px -12px rgba(255, 61, 248, 0.35);
+}
+@media (max-width: 720px) {
+  .host { grid-template-columns: 1fr; }
+  .host .art { max-width: 18rem; }
+}
+.cta {
+  margin-top: 2.5rem;
+}
+.button {
+  display: inline-block;
+  padding: 0.7rem 1.1rem;
+  border-radius: 0.45rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #0a0014;
+  font-weight: 600;
+  border: none;
+}
+.button:hover { color: #0a0014; }
+</style>

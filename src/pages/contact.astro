@@ -5,18 +5,62 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   title="Contact"
   description="Get in touch with the Floor is Rising team."
 >
-  <h1>Contact</h1>
+  <p class="kicker">Contact</p>
+  <h1>Contact us</h1>
+
   <div class="prose">
-    <p>
-      For show-related inquiries, email
-      <a href="mailto:hello@floorisrising.com">hello@floorisrising.com</a>.
-    </p>
-    <p>
-      Press, partnership, or sponsorship inquiries are welcome — please
-      include "Press" or "Sponsor" in your subject line.
-    </p>
+    <p>We want to hear from you. Reach us at:</p>
+
+    <ul class="contacts">
+      <li>
+        <span class="label">Email</span>
+        <a href="mailto:hello@floorisrising.com">hello@floorisrising.com</a>
+      </li>
+      <li>
+        <span class="label">Twitter</span>
+        <a href="https://twitter.com/floorisrising" target="_blank" rel="noopener">
+          @floorisrising
+        </a>
+      </li>
+    </ul>
+
     <p class="muted small">
-      Replace this copy with the real contact details before launch.
+      Press, partnership, and sponsorship inquiries welcome — please include
+      "Press" or "Sponsor" in your subject line.
     </p>
   </div>
 </BaseLayout>
+
+<style>
+.kicker {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  color: var(--accent-3);
+  margin: 0 0 0.4rem;
+}
+.contacts {
+  list-style: none;
+  padding: 0;
+  margin: 1.75rem 0;
+  display: grid;
+  gap: 0.5rem;
+  max-width: 26rem;
+}
+.contacts li {
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--rule);
+  align-items: baseline;
+}
+.contacts .label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-3);
+}
+</style>
