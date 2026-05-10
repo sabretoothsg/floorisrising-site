@@ -1,0 +1,59 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const posts = (await getCollection("posts")).sort(
+  (a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime()
+);
+---
+<BaseLayout
+  title="Blog"
+  description="Show notes and companion essays for Floor is Rising episodes."
+>
+  <h1>Blog</h1>
+  <p class="muted">{posts.length} posts — show notes and companion essays.</p>
+
+  <ul class="post-list">
+    {posts.map((p) => {
+      const dateStr = p.data.pubDate.toISOString().slice(0, 10);
+      return (
+        <li>
+          <a href={`/blog/${p.slug}/`}>
+            <time datetime={p.data.pubDate.toISOString()}>{dateStr}</time>
+            <span>{p.data.title}</span>
+          </a>
+        </li>
+      );
+    })}
+  </ul>
+</BaseLayout>
+
+<style>
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+.post-list li {
+  border-bottom: 1px solid var(--rule);
+}
+.post-list a {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border: none;
+  align-items: baseline;
+}
+.post-list a:hover { color: var(--fg); }
+.post-list a:hover span { color: var(--accent); }
+.post-list time {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--fg-muted);
+}
+.post-list span { color: var(--fg); }
+@media (max-width: 540px) {
+  .post-list a { grid-template-columns: 1fr; gap: 0.15rem; }
+}
+</style>

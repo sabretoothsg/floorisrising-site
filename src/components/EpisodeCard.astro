@@ -1,0 +1,64 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  episode: CollectionEntry<"episodes">;
+}
+
+const { episode } = Astro.props;
+const { title, episodeNumber, season, pubDate, subtitle } = episode.data;
+const dateStr = pubDate.toISOString().slice(0, 10);
+---
+<a class="ep-card" href={`/podcast/${episode.slug}/`}>
+  <div class="meta">
+    <span class="num">S{season}·E{episodeNumber}</span>
+    <time datetime={pubDate.toISOString()}>{dateStr}</time>
+  </div>
+  <h3 class="title">{title}</h3>
+  {subtitle && <p class="subtitle muted small">{subtitle}</p>}
+</a>
+
+<style>
+.ep-card {
+  display: block;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--rule);
+  border-radius: 0.6rem;
+  background: var(--bg-elev);
+  color: var(--fg);
+  border-bottom: 1px solid var(--rule);
+  transition: transform .15s, border-color .15s, box-shadow .15s;
+}
+.ep-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px -8px rgba(255, 61, 248, 0.35);
+  color: var(--fg);
+}
+.meta {
+  display: flex;
+  gap: 0.75rem;
+  align-items: baseline;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+.meta .num {
+  color: var(--accent-3);
+  text-transform: uppercase;
+}
+.meta time {
+  color: var(--fg-muted);
+}
+.title {
+  font-size: 1.1rem;
+  margin: 0.4rem 0 0.2rem;
+  color: var(--fg);
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+}
+.subtitle {
+  margin: 0;
+}
+</style>

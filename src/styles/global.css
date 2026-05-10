@@ -1,0 +1,80 @@
+/* Pink/purple synthwave — minimal v1 palette. Refine after first preview deploy. */
+:root {
+  --bg: #0c0214;
+  --bg-elev: #1a0830;
+  --fg: #f5e9ff;
+  --fg-muted: #c9a8e8;
+  --accent: #ff3df8;       /* hot pink */
+  --accent-2: #8a2be2;     /* electric purple */
+  --accent-3: #00e5ff;     /* synth cyan, sparingly */
+  --rule: rgba(255, 61, 248, 0.25);
+  --link: #ff8ef0;
+  --link-hover: #fff;
+
+  --maxw: 72rem;
+  --measure: 38rem;
+
+  --font-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Inter, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(ellipse at top, #1a0830 0%, var(--bg) 60%) no-repeat fixed;
+  color: var(--fg);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--link); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .15s, color .15s; }
+a:hover { color: var(--link-hover); border-bottom-color: var(--accent); }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin: 0 0 .6em;
+  color: var(--fg);
+}
+h1 {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+h2 { font-size: clamp(1.4rem, 2.6vw, 2rem); }
+h3 { font-size: 1.2rem; color: var(--fg-muted); }
+
+img { max-width: 100%; height: auto; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+
+main {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+.prose { max-width: var(--measure); }
+.prose p, .prose ul, .prose ol { margin: 0 0 1em; }
+.prose strong { color: var(--fg); }
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-3);
+  border: 1px solid var(--accent-3);
+  border-radius: 999px;
+  padding: 0.15rem 0.55rem;
+}
+
+.muted { color: var(--fg-muted); }
+.small { font-size: 0.875rem; }

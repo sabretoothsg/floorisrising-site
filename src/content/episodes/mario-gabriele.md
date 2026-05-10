@@ -1,0 +1,72 @@
+---
+title: "Mario Gabriele - Writing article about Opensea-&gt;Starting a NFT project"
+slug: "mario-gabriele"
+pubDate: 2022-04-14T09:00:00Z
+season: 1
+episodeNumber: 60
+itunesType: full
+explicit: false
+mp3Filename: "FIR-20-20Mario-20Gabriele.mp3"
+mp3Bytes: 26539237
+artworkUrl: "https://artwork.captivate.fm/e1879b40-1087-4467-a6ab-926f12680ec2/f9N3WKC-x9EBDWcVOopXwaUe.jpeg"
+subtitle: ""
+summary: ""
+captivateEpisodeId: "c1df90ae-e6ae-4025-ba65-2af282ce6f32"
+legacyPath: "/podcast/mario-gabriele/"
+---
+
+Podcast: _Floor Is Rising_ 
+
+Episode: Mario Gabriele
+
+Welcome to the podcast _Floor Is Rising_ with host Sabre Tooth, a professional NFT collector and Kizu, a professional art critic. On this podcast, we talk deeply about the business of creating, collecting and analyzing NFTs. So, if you’re a creator or collector of NFTs, jump in! 
+
+On today’s episode of _Floor is Rising_, host Sabre Tooth is joined by Mario Gabriele, founder of [The Generalist](https://www.readthegeneralist.com/) and one of the best writers on the internet. He found NFTs last year, like so many others, through Twitter. He’s always been interested in crypto and understanding that world, so when NFTs popped off, it was a natural fit for him. The inflection point for him was when Apes hit the market. Writing a piece for The Generalist led him to buying and creating his own NFTs. He felt like there was a missed opportunity in the market because it was so aesthetic-based, and the source material wasn’t super deep. He wanted to view NFTs as a literary character and filter them less by aesthetic and more about their character. 
+
+It was this line of thinking that led him to creating [Philosophical Foxes.](https://www.philosophicalfoxes.com/) Inspired by BAYC, he aims to build out the lore of his Foxes and wants to tell stories with them using novel technology. The market can be irrational and fickle, so he hopes his community and narrative are the measures of success he’s judged upon, rather than how much the price is. Of course he wants a triple hit in which the price is competitive, but he believes that comes after the success of the story.
+
+The ultimate NFT bottleneck is the noise in the market. Many are cool projects, but Mario explains that there are also bad projects and scams out there. Literary projects, he believes, will be a slower burn as people begin to diversify their interest in NFTs. They want to infiltrate everything, film, media, digital, and more. He’s sure that some will be broad and hit all of those markets, but others may niche down to just eBooks, or instagram. The thing he’s currently most interested in is the immediate social capital given to NFTs. 
+
+  
+
+One of the first things Mario did when creating Foxes is setting their values. One of the first ones was Philosophy not Floor. The people who have a bunch of Foxes are some of the best builders in the world, so while he wants to be literary and philosophical, he doesn’t want to be precious. Foxes are in the beginning stages, so he’s excited to move into the messy middle.
+
+  
+
+Lastly, Mario explains his current favorite artist is Dom Hoffman, and his work in Corruptions.
+
+  
+
+Thanks for listening and don’t forget to subscribe and leave us a review! 
+
+  
+
+  
+
+Timestamps:
+
+1:00 – Introduction to this episode and today's guests
+
+1:21 – How Mario got into NFTs
+
+4:25– The missed opportunity in NFTs
+
+7:36 – The hole FoxesNFTs fills in the market
+
+9:37 - How Mario will measure the success of his NFTs
+
+15:22 - The current bottleneck in NFTs
+
+  
+
+Tags:
+
+Creating, collecting, analyzing, NFT, crypto, funds, portfolio, manager, products, field, Foxes, builders, unsustainable, effort, survive, backstories, interest, assess, development, alpha, beta, questions, whitepapers, project, games, analyze, process, data, tweaks, enhance, role, ecosystem, ambiguity, standpoints, metric, AI, philosophy, 
+
+  
+
+Links:
+
+Learn more about Mario Gabriele and The Generalist [here](https://twitter.com/mariogabriele)
+
+Connect with _Floor Is Rising_ on [Twitter](https://twitter.com/Floor_Is_Rising).

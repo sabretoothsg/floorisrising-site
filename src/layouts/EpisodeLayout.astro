@@ -1,0 +1,53 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import AudioPlayer from "../components/AudioPlayer.astro";
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  episode: CollectionEntry<"episodes">;
+}
+
+const { episode } = Astro.props;
+const { title, episodeNumber, season, pubDate, subtitle, artworkUrl, mp3Filename } = episode.data;
+const dateStr = pubDate.toISOString().slice(0, 10);
+---
+<BaseLayout
+  title={title}
+  description={subtitle || `Episode ${episodeNumber} of Floor is Rising.`}
+  pubDate={pubDate}
+  image={artworkUrl}
+>
+  <article>
+    <p class="meta">
+      <span class="tag">S{season}·E{episodeNumber}</span>
+      <time datetime={pubDate.toISOString()}>{dateStr}</time>
+    </p>
+    <h1>{title}</h1>
+    {subtitle && <p class="subtitle muted">{subtitle}</p>}
+
+    <AudioPlayer filename={mp3Filename} />
+
+    <div class="prose">
+      <slot />
+    </div>
+
+    <p class="back small"><a href="/podcast/">← All episodes</a></p>
+  </article>
+</BaseLayout>
+
+<style>
+.meta {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  font-size: 0.85rem;
+  margin: 0 0 0.6rem;
+}
+.subtitle {
+  font-size: 1.1rem;
+  margin-top: -0.4rem;
+}
+.back {
+  margin-top: 3rem;
+}
+</style>

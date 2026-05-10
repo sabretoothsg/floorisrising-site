@@ -1,0 +1,46 @@
+---
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="inner">
+    <p class="muted small">© {year} Floor is Rising. All rights reserved.</p>
+    <ul>
+      <li><a href="/feed/podcast.xml">RSS</a></li>
+      <li><a href="/privacy/">Privacy</a></li>
+      <li><a href="/terms/">Terms</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<style>
+.site-footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 4rem;
+  padding: 2rem 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+.inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul a {
+  color: var(--fg-muted);
+  font-size: 0.9rem;
+  border: none;
+}
+ul a:hover { color: var(--fg); }
+</style>

@@ -1,0 +1,51 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import AudioPlayer from "../components/AudioPlayer.astro";
+import { getEntry, type CollectionEntry } from "astro:content";
+
+interface Props {
+  post: CollectionEntry<"posts">;
+}
+
+const { post } = Astro.props;
+const { title, pubDate, pairedEpisodeSlug } = post.data;
+const dateStr = pubDate.toISOString().slice(0, 10);
+
+const episode = pairedEpisodeSlug
+  ? await getEntry("episodes", pairedEpisodeSlug)
+  : null;
+---
+<BaseLayout title={title} pubDate={pubDate}>
+  <article>
+    <p class="meta small muted">
+      <time datetime={pubDate.toISOString()}>{dateStr}</time>
+      {episode && (
+        <>
+          {" · "}
+          <a href={`/podcast/${episode.slug}/`}>
+            Listen to episode {episode.data.episodeNumber}
+          </a>
+        </>
+      )}
+    </p>
+    <h1>{title}</h1>
+
+    {episode && (
+      <AudioPlayer
+        filename={episode.data.mp3Filename}
+        title={`Episode ${episode.data.episodeNumber}: ${episode.data.title}`}
+      />
+    )}
+
+    <div class="prose">
+      <slot />
+    </div>
+
+    <p class="back small"><a href="/blog/">← All posts</a></p>
+  </article>
+</BaseLayout>
+
+<style>
+.meta { margin: 0 0 0.6rem; }
+.back { margin-top: 3rem; }
+</style>

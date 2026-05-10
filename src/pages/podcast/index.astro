@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EpisodeCard from "../../components/EpisodeCard.astro";
+
+const episodes = (await getCollection("episodes")).sort(
+  (a, b) => b.data.episodeNumber - a.data.episodeNumber
+);
+---
+<BaseLayout
+  title="Episodes"
+  description="All episodes of Floor is Rising — long-form NFT and crypto-art interviews."
+>
+  <h1>Episodes</h1>
+  <p class="muted">{episodes.length} episodes — Season 1, 2021 – 2023.</p>
+
+  <div class="grid">
+    {episodes.map((ep) => <EpisodeCard episode={ep} />)}
+  </div>
+</BaseLayout>
+
+<style>
+.grid {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: 1fr;
+  margin-top: 1.5rem;
+}
+@media (min-width: 720px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>

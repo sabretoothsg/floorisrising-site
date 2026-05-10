@@ -1,0 +1,30 @@
+# Secrets
+.env
+.env.local
+.env.*.local
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Astro
+dist/
+.astro/
+
+# Migration: large local MP3 cache (re-downloadable from Captivate)
+migration/mp3s/
+# Migration source data: WXR contains author email addresses, manifest is
+# already lossless-extracted into src/content/episodes/. Keep locally only.
+migration/floorisrisingnftpodcast.WordPress.2026-05-10.xml
+migration/floorisrising_episodes.json
+# Throwaway inspection scripts used during migration.
+migration/scripts/_*.mjs
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
+*.swp

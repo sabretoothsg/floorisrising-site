@@ -1,0 +1,97 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import EpisodeCard from "../components/EpisodeCard.astro";
+
+const episodes = (await getCollection("episodes")).sort(
+  (a, b) => b.data.episodeNumber - a.data.episodeNumber
+);
+const recent = episodes.slice(0, 6);
+---
+<BaseLayout title="Floor is Rising — NFT Podcast">
+  <section class="hero">
+    <p class="kicker">A podcast on NFTs and crypto art</p>
+    <h1>Floor is Rising</h1>
+    <p class="lede">
+      Long-form interviews with the artists, collectors, and builders shaping
+      digital art on the blockchain. {episodes.length} episodes from the
+      original 2021–2023 run, now archived in their original form.
+    </p>
+    <p class="cta">
+      <a class="button" href="/podcast/">Browse all episodes</a>
+      <a class="button button-ghost" href="/feed/podcast.xml">Subscribe via RSS</a>
+    </p>
+  </section>
+
+  <section>
+    <h2>Latest episodes</h2>
+    <div class="grid">
+      {recent.map((ep) => <EpisodeCard episode={ep} />)}
+    </div>
+    <p class="more">
+      <a href="/podcast/">View all {episodes.length} episodes →</a>
+    </p>
+  </section>
+</BaseLayout>
+
+<style>
+.hero {
+  padding: 3rem 0 2rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 2.5rem;
+}
+.kicker {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  color: var(--accent-3);
+  margin: 0 0 0.4rem;
+}
+.lede {
+  max-width: var(--measure);
+  font-size: 1.1rem;
+  color: var(--fg-muted);
+}
+.cta {
+  display: flex;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.button {
+  display: inline-block;
+  padding: 0.7rem 1.1rem;
+  border-radius: 0.45rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #0a0014;
+  font-weight: 600;
+  border: none;
+  transition: transform .15s, box-shadow .15s;
+}
+.button:hover {
+  color: #0a0014;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px -6px rgba(255, 61, 248, 0.5);
+}
+.button-ghost {
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid var(--accent);
+}
+.button-ghost:hover {
+  color: var(--accent);
+}
+.grid {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: 1fr;
+  margin-top: 1.5rem;
+}
+@media (min-width: 720px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+.more {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+</style>

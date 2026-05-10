@@ -1,0 +1,99 @@
+---
+const nav = [
+  { href: "/", label: "Home" },
+  { href: "/podcast/", label: "Episodes" },
+  { href: "/blog/", label: "Blog" },
+  { href: "/about/", label: "About" },
+  { href: "/listen/", label: "Listen" },
+  { href: "/contact/", label: "Contact" },
+];
+const current = Astro.url.pathname.replace(/\/$/, "") || "/";
+---
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="/">
+      <span class="brand-mark">FIR</span>
+      <span class="brand-name">Floor is Rising</span>
+    </a>
+    <nav>
+      <ul>
+        {nav.map((item) => {
+          const active = (item.href.replace(/\/$/, "") || "/") === current;
+          return (
+            <li>
+              <a href={item.href} class:list={[{ active }]}>{item.label}</a>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+.site-header {
+  border-bottom: 1px solid var(--rule);
+  background: rgba(12, 2, 20, 0.7);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.inner {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0.9rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border-bottom: none;
+  font-family: var(--font-display);
+  font-weight: 700;
+}
+.brand:hover { border-bottom: none; }
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.4rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #0a0014;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+.brand-name {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 1.05rem;
+}
+nav ul {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: var(--fg-muted);
+  font-size: 0.95rem;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.15rem;
+}
+nav a:hover { color: var(--fg); border-bottom-color: var(--accent); }
+nav a.active { color: var(--fg); border-bottom-color: var(--accent); }
+
+@media (max-width: 640px) {
+  .brand-name { display: none; }
+  nav ul { gap: 0.85rem; }
+  nav a { font-size: 0.85rem; }
+}
+</style>

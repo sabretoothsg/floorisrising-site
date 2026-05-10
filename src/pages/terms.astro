@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const updated = "2026-05-10";
+---
+<BaseLayout
+  title="Terms"
+  description="Terms of use for the Floor is Rising website."
+>
+  <h1>Terms</h1>
+  <p class="muted small">Last updated: <time datetime={updated}>{updated}</time></p>
+  <div class="prose">
+    <p>
+      The content on this website is provided for informational and entertainment
+      purposes. Episodes and show notes represent the views of the hosts and
+      their guests and do not constitute investment, legal, or tax advice.
+    </p>
+    <p>
+      Episode audio and editorial content are © Floor is Rising. You may link
+      to and share episodes freely. Republishing episode audio in whole or
+      transcripts in whole requires written permission.
+    </p>
+    <p class="muted small">
+      Replace this placeholder with reviewed legal language before launch.
+    </p>
+  </div>
+</BaseLayout>

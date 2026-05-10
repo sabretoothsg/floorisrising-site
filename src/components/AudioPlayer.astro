@@ -1,0 +1,34 @@
+---
+import { r2Url } from "../lib/r2";
+
+interface Props {
+  filename: string;
+  title?: string;
+}
+
+const { filename, title } = Astro.props;
+const src = r2Url(filename);
+---
+<figure class="audio-player">
+  {title && <figcaption class="muted small">{title}</figcaption>}
+  <audio controls preload="none" src={src}>
+    <a href={src}>Download episode (MP3)</a>
+  </audio>
+</figure>
+
+<style>
+.audio-player {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  border: 1px solid var(--rule);
+  border-radius: 0.6rem;
+  background: linear-gradient(135deg, rgba(255,61,248,0.06), rgba(138,43,226,0.06));
+}
+.audio-player figcaption {
+  margin-bottom: 0.6rem;
+}
+audio {
+  width: 100%;
+  /* Native player picks up user-agent style; we just frame it. */
+}
+</style>

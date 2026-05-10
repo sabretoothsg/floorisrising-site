@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const links = [
+  { name: "Apple Podcasts", url: "https://podcasts.apple.com/podcast/floor-is-rising/id1568948345" },
+  { name: "Spotify", url: "https://open.spotify.com/show/3gQYfQzqbWJDejVuPfXvSY" },
+  { name: "Google Podcasts", url: "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5jYXB0aXZhdGUuZm0vZmxvb3JpcmlzaW5nLw" },
+  { name: "RSS", url: "/feed/podcast.xml" },
+];
+---
+<BaseLayout
+  title="Listen"
+  description="Subscribe to Floor is Rising on your podcast app of choice."
+>
+  <h1>Listen</h1>
+  <div class="prose">
+    <p>
+      Floor is Rising is available everywhere podcasts are. Subscribe on your
+      app of choice — episodes will continue to be served from the same RSS
+      feed.
+    </p>
+    <ul class="apps">
+      {links.map((l) => (
+        <li><a href={l.url} target={l.url.startsWith("http") ? "_blank" : undefined} rel="noopener">{l.name}</a></li>
+      ))}
+    </ul>
+    <p class="muted small">
+      Subscription URLs above are best-effort and may need updating after the
+      Captivate redirect propagates.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+.apps {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+}
+.apps li {
+  border: 1px solid var(--rule);
+  border-radius: 0.5rem;
+  background: var(--bg-elev);
+}
+.apps a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--fg);
+  border: none;
+}
+.apps a:hover { color: var(--accent); }
+</style>

@@ -1,0 +1,81 @@
+---
+title: "Jordi Alexander - NFT market crystal ball gazing"
+slug: "jordi-alexander"
+pubDate: 2022-04-25T09:00:00Z
+season: 1
+episodeNumber: 62
+itunesType: full
+explicit: false
+mp3Filename: "FIR-20-20Jordi-20Alexander-20-fin.mp3"
+mp3Bytes: 45834741
+artworkUrl: "https://artwork.captivate.fm/47e4001c-c774-487a-a841-98df05e23e87/NuItwgKsi1fTApK7jgiFyvl8.jpeg"
+subtitle: ""
+summary: ""
+captivateEpisodeId: "ae5934a3-fa4d-462b-a363-4d96788ecbcc"
+legacyPath: "/podcast/jordi-alexander/"
+---
+
+FIR with Jordi Alexander
+
+On today’s episode of ‘_Floor Is Rising’,_ hosts Sabre Tooth (Professional NFT Collector) and Kizu (A Professional Art Critic) talk with guest Jordi Alexander, Game Theorist and 1st Principles Thinker, CIO of Selini Capital & Advisor to many NFT Projects, All-around games expert, and former poker player who has a lot of opinions on things to Crypto. He shares his opinions on a variety of subjects related to NFT's.
+
+  
+
+Episode Highlights
+
+-   01:45 – Jordi shares how he got into Crypto and his first introduction to NFTs.
+-   03:35 - There's a lot more psychology involved behind thesis in NFTs, says Jordi.
+-   05:35 – Sabre and Jordi discuss the BAYC flipping of the Punks pfps.
+-   07:25 – Jordi talks about the two things that he finds interesting in his current role.
+-   09:38 – Jordi thinks a lot about the fragmentation of liquidity and what does that end game look like?
+-   12:28 – Kizu asks if the community is driving the price or if the price is driving the community.
+-   14:07 – The best practice that most people think of in the NFT space is post hoc rationalization. This is valuable because it increased the price thus, it is now valuable.
+-   16:00 - The price has been a reflection of what has gone right and what has gone wrong, states Jordi
+-   17:35 – Jordi explains the concept of risk-adjusted investing.
+-   19:54 – Jordi discusses NFT from a legal and security perspective.
+-   22:17 - There are arguments to be made that they are securities and this creates a lot of legal battles that are going to have to be fought, highlights Jordi
+-   24:00 – The NFT being part of the community, it is good if you reward people in that NFT community. If they're being active in the community, you want to give them something that's the very basic thing.
+-   26:11 – When you add financial incentives to a particular game design or game mechanic that didn't have that before, it turns into completely something else. 
+-   29:33 – Jordi expresses his view on how he feels about attempting to dethrone the open sea situation that probably will play out in the next few years.
+-   32:43 - We will have wallets specially designed for NFTs where we’ll have our wallet address and for all the other EVM chains and everything else that exists, states Jordi.
+-   34:35 - It's a little bit of a circular thing where people are paying fees to themselves to get a slightly higher percentage of rewards, mentions Jordi.
+-   36:22 – Jordi is very curious to see how digital artists start to create modes for themselves where their art cannot be as easily replicated and that is quite sustainable.
+-   38:00 – Jordi shares about building community when it is one on one.
+-   40:00 - The benefit of NFT is that everybody can look at it. It's not like it's locked up somewhere. Everybody's looking at the creation and there is the status aspect as well.
+-   42:00 – Jordi suggests people look at NFT as real estate and when he wants to invest in real estate, he is looking for things that are not easy to replicate.
+-   45:15 – Jordi talks about his favorite NFT project of artists.
+
+  
+
+  
+
+Three Key Points
+
+1.  There are always going to be people who are looking at the market and saying which one is the most expensive, that's going to show people the most status and they just want to buy that one and don't care if it's pixelated or if it's an ape, there is a clear catalyst that just drives price forward, and that is price.
+2.  Jordi explains that the gaming side is a whole different element where NFTs just fit in very nicely in terms of the ownership of items. We don't necessarily need to create a whole new structure there. It's just exactly what it used to be where we would have some rare item in the game and now, we're just making that NFT so that it's much easier for people to move it around, sell it, own it, and feel like more ingrained with the game in that aspect. So apart from the gaming side, the social side of the social tokens is something that he finds most fascinating.
+3.  The technology will play a part in terms of creating ways to list NFT on multiple marketplaces at the same time, if we put it on looksrare and we’re not finding buyers from opensea or whatever 20 other platforms come up, there's going to be ways where we can still source all the buyers because as a seller, all we're trying to do is find a buyer that's willing to pay the highest price as soon as possible so that we can sell it. So, he thinks that technology will start to get upgraded, and this will play a transformative effect in many ways.
+
+  
+
+  
+
+Tweetable Quotes
+
+-   “I'm always amazed how some people get so tied up into a specific picture of a penguin.” - Jordi Alexander
+-   “Those punks are not the Bitcoin of NFTs because they don't have quite the same provenance.” - Jordi Alexander
+-   “You can level up your NFT, there's a gaming aspect to it as well and a social aspect.” - Jordi Alexander
+-   “If somebody falls in love with their NFT they are still going to have some financial incentives.” - Jordi Alexander
+-   “Price is just going to be a reflection of the culture in the long run.” - Jordi Alexander
+-   “I don't think they made a bad investment. You just have to consider the downside with a lot lower.” - Jordi Alexander
+-   “You have to maintain momentum and if you start losing a lot of momentum, it's kind of buried.” - Jordi Alexander
+-   “I do see the centerpiece being the artist centerpiece, being the creator and creators themselves, driving the community. I see that as being the future.” - Jordi Alexander
+-   “If you think there's some unique technology behind the NFT or a unique person behind it, that's something that you can at least follow.” - Jordi Alexander
+
+  
+
+  
+
+Resources Mentioned
+
+-   Floor is Rising:         [Website](https://www.floorisrising.com/)      [Twitter](https://twitter.com/Floor_Is_Rising)       [Apple](https://podcasts.apple.com/us/podcast/floor-is-rising/id1570037873)
+-   Jordi Alexander:        [Twitter](https://twitter.com/gametheorizing?lang=en)

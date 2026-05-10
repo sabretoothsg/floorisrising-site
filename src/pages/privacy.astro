@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const updated = "2026-05-10";
+---
+<BaseLayout
+  title="Privacy"
+  description="Privacy policy for the Floor is Rising website."
+>
+  <h1>Privacy</h1>
+  <p class="muted small">Last updated: <time datetime={updated}>{updated}</time></p>
+  <div class="prose">
+    <p>
+      Floor is Rising is a static website. It does not require accounts, does
+      not set cookies for advertising, and does not run third-party tracking
+      scripts beyond what is required to play audio embedded on the page.
+    </p>
+    <h2>What we don't collect</h2>
+    <ul>
+      <li>We don't operate accounts or logins.</li>
+      <li>We don't run advertising trackers.</li>
+      <li>We don't sell or rent data.</li>
+    </ul>
+    <h2>What is logged</h2>
+    <p>
+      Standard server access logs are kept by our hosting provider (Cloudflare)
+      for operational and security purposes. Audio file requests served from
+      <code>media.floorisrising.com</code> are logged the same way.
+    </p>
+    <h2>Contact</h2>
+    <p>
+      Questions about this policy? Email
+      <a href="mailto:hello@floorisrising.com">hello@floorisrising.com</a>.
+    </p>
+    <p class="muted small">
+      Replace this placeholder with reviewed legal language before launch.
+    </p>
+  </div>
+</BaseLayout>
