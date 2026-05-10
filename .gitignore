@@ -28,3 +28,6 @@ migration/scripts/_*.mjs
 .vscode/
 .idea/
 *.swp
+
+# Tooling
+.claude/settings.local.json
