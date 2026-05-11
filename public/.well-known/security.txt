@@ -1,0 +1,4 @@
+Contact: mailto:hello@floorisrising.com
+Expires: 2027-05-11T00:00:00Z
+Preferred-Languages: en
+Canonical: https://floorisrising.com/.well-known/security.txt
