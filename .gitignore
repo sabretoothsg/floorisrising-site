@@ -31,3 +31,9 @@ migration/scripts/_*.mjs
 
 # Tooling
 .claude/settings.local.json
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
